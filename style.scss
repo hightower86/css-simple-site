@@ -10,7 +10,7 @@ body {
   width: 80%;
   margin: auto;
   overflow: hidden; //no scrollbar
-  display: flex;
+  //display: flex;
 }
 
 #main-header {
@@ -24,9 +24,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-
   background-color: #333;
-
   color: #fff;
 
   ul {
@@ -63,8 +61,14 @@ body {
   }
 }
 
+#main-container {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-gap: 5px;
+}
+
 #main {
-  width: 70%;
+  //width: 70%;
   padding: 10px;
   border: 1px solid #000;
 }
@@ -74,7 +78,7 @@ body {
   background-color: #000;
   color: #fff;
   border: 1px solid #000;
-  width: 30%;
+  //width: 30%;
   text-align: justify;
 }
 
@@ -85,4 +89,41 @@ body {
   padding: 20px;
   margin-top: 40px;
 
+}
+
+#gallery {
+  h2 {
+    text-align: center;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-gap: 10px;
+}
+
+.card {
+  height: 250px;
+  background-color: #999;
+  padding: 20px;
+  border-radius: 2%;
+
+  h2 {
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform .25s ease-out;
+
+  }
+}
+
+.img {
+  background-color: #777;
+  border-radius: 3%;
+  min-width: 200px;
+  min-height: 250px;
+  border: 1px solid #000;
 }

@@ -8,8 +8,7 @@ body {
 .container {
   width: 80%;
   margin: auto;
-  overflow: hidden;
-  display: flex; }
+  overflow: hidden; }
 
 #main-header {
   background-color: coral;
@@ -47,8 +46,12 @@ body {
     line-height: 1.6em;
     padding-top: 30px; }
 
+#main-container {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-gap: 5px; }
+
 #main {
-  width: 70%;
   padding: 10px;
   border: 1px solid #000; }
 
@@ -57,7 +60,6 @@ body {
   background-color: #000;
   color: #fff;
   border: 1px solid #000;
-  width: 30%;
   text-align: justify; }
 
 #main-footer {
@@ -66,6 +68,32 @@ body {
   text-align: center;
   padding: 20px;
   margin-top: 40px; }
+
+#gallery h2 {
+  text-align: center; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px; }
+
+.card {
+  height: 250px;
+  background-color: #999;
+  padding: 20px;
+  border-radius: 2%; }
+  .card h2 {
+    text-align: center; }
+  .card:hover {
+    transform: scale(1.02);
+    transition: transform .25s ease-out; }
+
+.img {
+  background-color: #777;
+  border-radius: 3%;
+  min-width: 200px;
+  min-height: 250px;
+  border: 1px solid #000; }
 
 
 /*# sourceMappingURL=/css-site.e31bb0bc.css.map */
